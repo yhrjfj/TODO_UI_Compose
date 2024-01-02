@@ -8,7 +8,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.Font
 import com.yhr.jfj.todo_ui_compose.R
 
-
+// Custom font
 val Nunito = FontFamily(
     listOf(
         Font(R.font.nunito_light, FontWeight.Light),
