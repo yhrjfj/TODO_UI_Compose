@@ -9,13 +9,13 @@
               <type value="RUNNING_DEVICE_TARGET" />
               <deviceKey>
                 <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\yousu\.android\avd\RiJo.avd" />
+                  <type value="SERIAL_NUMBER" />
+                  <value value="adb-R5CT43QHSPJ-4RTDSK._adb-tls-connect._tcp" />
                 </Key>
               </deviceKey>
             </Target>
           </runningDeviceTargetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-01-03T16:56:14.116760Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-01-03T17:13:43.971161300Z" />
         </State>
       </entry>
     </value>

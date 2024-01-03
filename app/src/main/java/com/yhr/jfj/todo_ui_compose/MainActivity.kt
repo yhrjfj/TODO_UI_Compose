@@ -113,7 +113,7 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                             .padding(
                                 start = 16.dp,
-                                top = 16.dp,
+                                top = 8.dp,
                                 bottom = 16.dp
                             )
                     ) {
