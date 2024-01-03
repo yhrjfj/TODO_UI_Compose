@@ -24,13 +24,14 @@ class MainActivity : ComponentActivity() {
                         start = 16.dp,
                         bottom = 16.dp
                     )
-                ){
+                ) {
                     item {
                         ProfileHeaderComponent()
                     }
                     item {
                         Spacer(modifier = Modifier.height(30.dp))
                         WelcomeMessageComponent()
+                        Spacer(modifier = Modifier.height(30.dp))
                     }
                 }
             }
