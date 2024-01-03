@@ -1,9 +1,11 @@
 package com.yhr.jfj.todo_ui_compose.taskmanager.data.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -13,6 +15,7 @@ import androidx.compose.material3.AlertDialogDefaults.containerColor
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,6 +25,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.yhr.jfj.todo_ui_compose.R
+import com.yhr.jfj.todo_ui_compose.ui.theme.LightBlue
+import com.yhr.jfj.todo_ui_compose.ui.theme.LightGreen
 import com.yhr.jfj.todo_ui_compose.ui.theme.Orange
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -29,8 +34,7 @@ import com.yhr.jfj.todo_ui_compose.ui.theme.Orange
 fun ProfileHeaderComponent() {
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
@@ -43,8 +47,14 @@ fun ProfileHeaderComponent() {
         )
         BadgedBox(
             badge = {
-                Badge {
-                    containerColor
+                Badge(
+                    containerColor = Orange,
+                    contentColor = Color.White,
+                    modifier = Modifier.offset(x = (-6).dp, y = 8.dp)
+                ) {
+                    Text(
+                        text = "5",
+                    )
                 }
             },
             modifier = Modifier
