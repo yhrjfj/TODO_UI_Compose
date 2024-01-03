@@ -66,7 +66,7 @@ fun TaskComponent() {
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(14.dp))
                         .background(LightPurple)
-                        .weight(0.8f),
+                        .weight(0.9f),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text(
@@ -95,7 +95,9 @@ fun TaskComponent() {
                     )
                 }
                 Divider(
-                    modifier = Modifier.width(6.dp),
+                    modifier = Modifier
+                        .width(6.dp)
+                        .weight(0.1f),
                     color = Color.Black
                 )
             }
