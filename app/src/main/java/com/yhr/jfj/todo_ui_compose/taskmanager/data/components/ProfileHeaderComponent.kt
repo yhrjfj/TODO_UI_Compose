@@ -38,7 +38,7 @@ fun ProfileHeaderComponent() {
             painter = painterResource(id = (R.drawable.image)),
             contentDescription = "Profile",
             modifier = Modifier
-                .size(30.dp)
+                .size(45.dp)
                 .clip(CircleShape),
         )
         BadgedBox(
