@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.yhr.jfj.todo_ui_compose.taskmanager.data.components.ProfileHeaderComponent
+import com.yhr.jfj.todo_ui_compose.taskmanager.data.components.TaskComponent
 import com.yhr.jfj.todo_ui_compose.taskmanager.data.components.WelcomeMessageComponent
 import com.yhr.jfj.todo_ui_compose.ui.theme.TODO_UI_ComposeTheme
 
@@ -32,6 +33,23 @@ class MainActivity : ComponentActivity() {
                         Spacer(modifier = Modifier.height(30.dp))
                         WelcomeMessageComponent()
                         Spacer(modifier = Modifier.height(30.dp))
+                    }
+                    item {
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        TaskComponent()
+                        Spacer(modifier = Modifier.height(8.dp))
+
                     }
                 }
             }
