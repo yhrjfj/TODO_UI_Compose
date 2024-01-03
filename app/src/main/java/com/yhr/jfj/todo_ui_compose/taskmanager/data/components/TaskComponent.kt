@@ -26,18 +26,23 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.yhr.jfj.todo_ui_compose.R
+import com.yhr.jfj.todo_ui_compose.taskmanager.data.Task
+import com.yhr.jfj.todo_ui_compose.ui.theme.LightBlue
+import com.yhr.jfj.todo_ui_compose.ui.theme.LightGreen
 import com.yhr.jfj.todo_ui_compose.ui.theme.LightPurple
 
-@Preview(showSystemUi = true)
 @Composable
-fun TaskComponent() {
+fun TaskComponent(task: Task) {
+
+    val taskColor = listOf(LightPurple, LightBlue, LightGreen).random()
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text(
-            text = "9:00\nAM",
+            text = task.startTime,
             fontFamily = FontFamily(Font(R.font.nunito_bold)),
             textAlign = TextAlign.Center
         )
@@ -65,28 +70,30 @@ fun TaskComponent() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(14.dp))
-                        .background(LightPurple)
+                        .background(taskColor)
                         .weight(0.9f),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text(
-                        text = "Take Lunch",
+                        text = task.title,
                         fontFamily = FontFamily(Font(R.font.nunito_bold)),
                         modifier = Modifier.padding(
                             start = 12.dp,
                             top = 12.dp
                         )
                     )
+                    if (task.body != null) {
+                        Text(
+                            text = task.body,
+                            fontFamily = FontFamily(Font(R.font.nunito_bold)),
+                            modifier = Modifier.padding(
+                                start = 12.dp,
+                            ),
+                            color = Color.Gray
+                        )
+                    }
                     Text(
-                        text = "Cook food for your family and friends coz you invite them👌",
-                        fontFamily = FontFamily(Font(R.font.nunito_bold)),
-                        modifier = Modifier.padding(
-                            start = 12.dp,
-                        ),
-                        color = Color.Gray
-                    )
-                    Text(
-                        text = "12:00 - 1:00 PM",
+                        text = "${task.startTime} - ${task.endTime}",
                         fontFamily = FontFamily(Font(R.font.nunito_bold)),
                         modifier = Modifier.padding(
                             start = 12.dp,

@@ -10,11 +10,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.yhr.jfj.todo_ui_compose.taskmanager.data.Task
 import com.yhr.jfj.todo_ui_compose.taskmanager.data.components.ProfileHeaderComponent
 import com.yhr.jfj.todo_ui_compose.taskmanager.data.components.TaskComponent
 import com.yhr.jfj.todo_ui_compose.taskmanager.data.components.WelcomeMessageComponent
+import com.yhr.jfj.todo_ui_compose.taskmanager.data.taskList
 import com.yhr.jfj.todo_ui_compose.ui.theme.TODO_UI_ComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -44,22 +47,9 @@ class MainActivity : ComponentActivity() {
                             start = 8.dp
                         )
                     ) {
-                        item {
-                            TaskComponent()
+                        items(taskList) { task ->
+                            TaskComponent(task = task)
                             Spacer(modifier = Modifier.height(8.dp))
-                            TaskComponent()
-                            Spacer(modifier = Modifier.height(8.dp))
-                            TaskComponent()
-                            Spacer(modifier = Modifier.height(8.dp))
-                            TaskComponent()
-                            Spacer(modifier = Modifier.height(8.dp))
-                            TaskComponent()
-                            Spacer(modifier = Modifier.height(8.dp))
-                            TaskComponent()
-                            Spacer(modifier = Modifier.height(8.dp))
-                            TaskComponent()
-                            Spacer(modifier = Modifier.height(8.dp))
-
                         }
                     }
                 }
