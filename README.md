@@ -1,1 +1,1 @@
-![image](https://github.com/yhrjfj/TODO_UI_Compose/assets/102893295/9d894474-53e2-440a-8f02-b8d5495debc4)
+![image](https://github.com/yhrjfj/TODO_UI_Compose/assets/102893295/f87ba4f5-abf9-46c1-9e0f-3bf50b6405d6)
