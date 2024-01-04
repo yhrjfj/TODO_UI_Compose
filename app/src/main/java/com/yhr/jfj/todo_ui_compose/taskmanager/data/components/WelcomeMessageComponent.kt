@@ -23,7 +23,7 @@ fun WelcomeMessageComponent() {
             .padding(
                 start = 16.dp
             ),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         Text(
             text = "Hi Shadow",

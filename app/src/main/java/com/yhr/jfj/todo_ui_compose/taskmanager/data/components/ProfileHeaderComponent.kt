@@ -49,7 +49,7 @@ fun ProfileHeaderComponent() {
         )
         Text(
             text = "TODO",
-            fontSize = 25.sp,
+            fontSize = 30.sp,
             fontFamily = FontFamily(Font(R.font.nunito_extrabold))
         )
         BadgedBox(
