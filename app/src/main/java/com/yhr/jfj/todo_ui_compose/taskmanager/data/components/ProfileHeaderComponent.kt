@@ -33,7 +33,10 @@ import com.yhr.jfj.todo_ui_compose.ui.theme.Orange
 fun ProfileHeaderComponent() {
     Row(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .padding(
+                start = 12.dp
+            ),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {

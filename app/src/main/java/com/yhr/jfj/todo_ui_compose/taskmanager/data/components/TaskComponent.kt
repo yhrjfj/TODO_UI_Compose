@@ -37,7 +37,11 @@ fun TaskComponent(task: Task) {
     val taskColor = listOf(LightPurple, LightBlue, LightGreen).random()
 
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(
+                start = 12.dp
+            ),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -54,17 +58,14 @@ fun TaskComponent(task: Task) {
                     .size(16.dp)
                     .clip(shape = CircleShape)
                     .border(
-                        border = BorderStroke(3.dp, Color.Black),
-                        shape = CircleShape
+                        border = BorderStroke(3.dp, Color.Black), shape = CircleShape
                     )
             )
             Divider(
-                modifier = Modifier.width(6.dp),
-                color = Color.Black
+                modifier = Modifier.width(6.dp), color = Color.Black
             )
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
+                modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(
                     modifier = Modifier
@@ -78,8 +79,7 @@ fun TaskComponent(task: Task) {
                         text = task.title,
                         fontFamily = FontFamily(Font(R.font.nunito_bold)),
                         modifier = Modifier.padding(
-                            start = 12.dp,
-                            top = 12.dp
+                            start = 12.dp, top = 12.dp
                         )
                     )
                     if (task.body != null) {
@@ -96,16 +96,14 @@ fun TaskComponent(task: Task) {
                         text = "${task.startTime} - ${task.endTime}",
                         fontFamily = FontFamily(Font(R.font.nunito_bold)),
                         modifier = Modifier.padding(
-                            start = 12.dp,
-                            bottom = 12.dp
+                            start = 12.dp, bottom = 12.dp
                         )
                     )
                 }
                 Divider(
                     modifier = Modifier
                         .width(6.dp)
-                        .weight(0.1f),
-                    color = Color.Black
+                        .weight(0.1f), color = Color.Black
                 )
             }
         }
